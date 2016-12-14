@@ -1,9 +1,7 @@
-package day6
-
-class Part1 {
+class Day6 {
     static void main(String... args) {
         List<Map<Character, Integer>> stats = null
-        this.getClass().getResource('/day6/input.txt').eachLine { line ->
+        this.getClass().getResource('/input6.txt').eachLine { line ->
             if (stats == null) {
                 stats = new ArrayList<>()
                 for (int i = 0; i < line.length(); i++) {
@@ -20,7 +18,7 @@ class Part1 {
                 }
             }
         }
-        print "Part1: "
+        print "Day7: "
         for (int i = 0; i < stats.size(); i++) {
             print stats.get(i).max { a, b -> Integer.compare(a.value, b.value) }.key
         }
